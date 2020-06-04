@@ -66,9 +66,9 @@ Only content served over the gemini:// protocol may be further interpreted as de
 
 The convention to be adopted is as follows (to be discussed)
 
-### Embedded gliph
+### Embedded glyph
 
-LUACH gliph as first or last word in DISPLAYTEXT may be interpreted as LUACH element. For example: 
+LUACH glyph as first or last word in DISPLAYTEXT may be interpreted as LUACH element. For example: 
 
 *  "📦 A code snippet in python" 
 * "Meine Startseite 🏠"
@@ -100,7 +100,7 @@ The following LUACH elements are proposed as an initial set of hints. They can b
 
 The behaviour when more than one LUACH element is found in a link DISPLAYTEXT is unspecified and left to the client.
 
-Each element specifies its normal unicode gliph form or the anglo-centric textual form
+Each element specifies its normal unicode glyph form or the anglo-centric textual form
 
 ### "Home" (U+1F3E0) 🏠
 
@@ -115,7 +115,7 @@ Possible implementations might include:
 
 Intended meaning: *The linked page contains some useful common navigational links to help you navigate my site*
 
-Clients who interpret this gliph **should** display those links in the linked content in a helpful way. Text and headings in the linked content **should** be ignored.
+Clients who interpret this glyph **should** display those links in the linked content in a helpful way. Text and headings in the linked content **should** be ignored.
 
 The only level of depth permitted is 1. That is to say no deeper LUACH elements in the included content are to be further interpreted.
 
