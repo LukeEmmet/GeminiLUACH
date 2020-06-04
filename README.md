@@ -1,4 +1,4 @@
-# Lightweight Unicode Author Client Hinting for Gemini (LUACH) - a proposal
+# Lightweight Unicode Author Client Hinting for Gemini (LUACH) - a proposal/RFC
 This document outlines a draft proposal for lightweight hinting of author intent in gemini *text/gmi* files, in particular as textual decoration of links made.
 
 ### Status
