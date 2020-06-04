@@ -15,14 +15,15 @@ Luke Emmet: luke [dot] emmet [at] gmail [dot] com
 
 ## Background
 
-Gemini specifies an exchange protocol and very lightweight text structuring, similar to a very small subset of markdown. This text format is generally expected to be UTF-8 for the overwhelming majority of content.
+Gemini specifies an exchange protocol and very lightweight text structuring, similar to a very small subset of markdown. The charset is generally expected to be UTF-8 for the overwhelming majority of content.
 
 The general intention with Gemini is to keep the format very simple to be read by a range of users:
 
 * Users and authors reading and writing the file as plain UTF-8 text
 * Command line clients
 * Graphical clients
-* Search engines
+* Search engine crawlers and other aggregators
+* Speech clients
 
 The GMI text format is line oriented and includes the following key features only
 
@@ -67,7 +68,7 @@ Only content served over the gemini:// protocol may be further interpreted as de
 
 The convention to be adopted is as follows (to be discussed)
 
-### Embedded glyph
+### Embedded unicode glyph
 
 LUACH glyph as first or last word in DISPLAYTEXT may be interpreted as LUACH element. For example: 
 
@@ -102,11 +103,11 @@ The following LUACH elements are proposed as an initial set of hints. They can b
 
 The behaviour when more than one LUACH element is found in a link DISPLAYTEXT is unspecified and left to the client.
 
-Each element specifies its normal unicode glyph form or the anglo-centric textual form
+Each element specifies its normal Unicode glyph form and the optional anglo-centric textual form.
 
 ### "Home" (U+1F3E0) 🏠
 
-Intended meaning: *This is a link to my preferred "Home" URL.* 
+Intended meaning: *This is a link to the author's preferred "Home" URL.* 
 
 Possible implementations might include:
 
@@ -115,7 +116,7 @@ Possible implementations might include:
 
 ### "Navigation" or "Menu" (U+1F9ED) 🧭
 
-Intended meaning: *The linked page contains some useful common navigational links to help you navigate my site*
+Intended meaning: *The linked page contains some useful common navigational links to help you navigate the current site*
 
 Clients who interpret this glyph **should** display those links in the linked content in a helpful way. Text and headings in the linked content **should** be ignored.
 
@@ -158,6 +159,7 @@ The exact mechanism software clients may offer to users is unspecified. The foll
 * no action, but a visual decoration or further colour hinting may be shown
 * convert the link to an active button that shows a popup form or includes the content when pressed by the user
 * automatic inclusion of the content within a coloured boundary, configured on a domain basis, or globally
+* content included in a side bar to the main content
 
 ### "Has comments" 💬 U+1F4AC
 
@@ -173,7 +175,7 @@ Automated crawlers and bots can use the existence of such an element to build a 
 
 ### "Logo" (U+1F33C) 🌼 
 
-Intended meaning: *This is my preferred logo that may be shown on this page.* 
+Intended meaning: *This is the preferred logo that may be shown on this page.* 
 
 The size and location of the display of the logo is determined by the client.
 
@@ -183,9 +185,9 @@ The size and location of the display of the logo is determined by the client.
 
 ### "May include image" (U+1F304) 🌄
 
-Intended meaning: *You may display this linked image at or near the current location, if desired.* 
+Intended meaning: *This linked image **may** optionally be shown in context here if desired.* 
 
-The size and location is determined by the client.
+The size and location of the display of the image is determined by the client. Possible implementations would be similar to that for "may include" textual element, but for an image.
 
 * **Scope of inclusion: Only** images from the current domain may be interpreted - others are left as simple links.
 
