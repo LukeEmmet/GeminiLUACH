@@ -161,11 +161,11 @@ The exact mechanism software clients may offer to users is unspecified. The foll
 * automatic inclusion of the content within a coloured boundary, configured on a domain basis, or globally
 * content included in a side bar to the main content
 
-### "Has comments" 💬 U+1F4AC
+### "Has responses" 💬 U+1F4AC
 
-Intended meaning: *The linked URL provides further details of comments on the current page.*
+Intended meaning: *The linked URL provides further details of responses to the current page.*
 
-The intention is to link to a summary of comments and responses to this page. How the list of comments is assembled is optional, however automated crawlers can bots may assemble some of this picture by looking for "Comments on" elements.
+The intention is to link to a summary of comments and responses to this page. How the list of comments is assembled is unspecified, however automated crawlers can bots may assemble some of this picture by looking for "Responds to" LUACH elements found on pages (see next).
 
 ### "Responds to" 💭 U+1F4AD
 
@@ -175,7 +175,7 @@ Automated crawlers and bots can use the existence of such an element to build a 
 
 ### "Logo" (U+1F33C) 🌼 
 
-Intended meaning: *This is the preferred logo that may be shown on this page.* 
+Intended meaning: *The linked URL provides the preferred logo that may be shown on this page.* 
 
 The size and location of the display of the logo is determined by the client.
 
@@ -193,7 +193,7 @@ The size and location of the display of the image is determined by the client. P
 
 * Mime type: image/png or image/jpeg only - other mime types are left as simple links
 
-*Possibly merge this with "May include"?*
+*Possibly merge this with "May include", although separate glyph might be useful to indicate image rather than text?*
 
 
 
