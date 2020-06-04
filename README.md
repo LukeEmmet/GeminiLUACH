@@ -24,10 +24,11 @@ The general intention with Gemini is to keep the format very simple to be read b
 * Graphical clients
 * Search engines
 
-The GMI text format includes the following key features only
+The GMI text format is line oriented and includes the following key features only
 
 * text
 * links (prefixed =>)
+* preformatted text (blocked out like markdown with ```)
 * (optional) headings 1-3 (prefixed # to ###)
 * (optional) bulleted list, single level (prefixed *)
 
