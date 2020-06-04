@@ -78,7 +78,7 @@ This is the preferred form and is not language specific - and can be used in any
 
 ### LUACH text within square brackets 
 
-LUACH text as the as first or last element, separated by whitespace may be interpreted as LUACH element (case insensitive) - For example: 
+LUACH text as the as first or last element, within square brackets, separated by whitespace from the other text may be interpreted as LUACH element (case insensitive) - For example: 
 
 * "[Responds to] this discussion by another writer"
 * "[Home]"
@@ -91,7 +91,8 @@ This form is Anglo-centric and thus limited to the community of readers and writ
 
 Is this really needed? TBD. For example
 
-* "Here is my [home] page"
+* "Here is my [home] page" 
+* "This page [responds to] the essay on ABC by XYZ"
 
 *Possibly can leave this to a future iteration?*
 
