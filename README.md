@@ -77,7 +77,7 @@ LUACH glyph as first or last word in DISPLAYTEXT may be interpreted as LUACH ele
 
 This is the preferred form and is not language specific - and can be used in any language
 
-### LUACH text within square brackets 
+### LUACH element text within square brackets 
 
 LUACH text as the as first or last element, within square brackets, separated by whitespace from the other text may be interpreted as LUACH element (case insensitive) - For example: 
 
@@ -167,7 +167,7 @@ The exact mechanism software clients may offer to users is unspecified. The foll
 
 Intended meaning: *The linked URL provides further details of responses to the current page.*
 
-The intention is to link to a summary of comments and responses to this page. How the list of comments is assembled is unspecified, however automated crawlers can bots may assemble some of this picture by looking for "Responds to" LUACH elements found on pages (see next).
+The intention is to link to a summary of comments and responses to this page. How the list of comments is assembled is unspecified, however automated crawlers and bots may assemble some of this picture by looking for "Responds to" LUACH elements found on pages (see next).
 
 ### "Responds to" 💭 U+1F4AD
 
