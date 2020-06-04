@@ -84,7 +84,7 @@ LUACH text as the as first or last element, within square brackets, separated by
 * "[Responds to] this discussion by another writer"
 * "[Home]"
 
-This form is Anglo-centric and thus limited to the community of readers and writers.
+This form is Anglo-centric and thus limited to the community of readers and writers that will be able to naturally understand it.
 
 *Do we want to support this form?*
 
@@ -105,9 +105,11 @@ The behaviour when more than one LUACH element is found in a link DISPLAYTEXT is
 
 Each element specifies its normal Unicode glyph form and the optional anglo-centric textual form.
 
+*We can perhaps order them in terms of most commonly used to less common? Based on usage*
+
 ### "Home" (U+1F3E0) 🏠
 
-Intended meaning: *This is a link to the author's preferred "Home" URL.* 
+Intended meaning: *The linked URL is declared as the author's preferred "Home" URL from this page.* 
 
 Possible implementations might include:
 
@@ -116,7 +118,7 @@ Possible implementations might include:
 
 ### "Navigation" or "Menu" (U+1F9ED) 🧭
 
-Intended meaning: *The linked page contains some useful common navigational links to help you navigate the current site*
+Intended meaning: *The linked URL contains some useful common navigational links to help navigate the current site*
 
 Clients who interpret this glyph **should** display those links in the linked content in a helpful way. Text and headings in the linked content **should** be ignored.
 
@@ -136,11 +138,11 @@ Supported mime types
 
 ### "May include" 📦 U+1F4E6
 
-Intended meaning: *This linked content **may** optionally be shown in context here if desired.* 
+Intended meaning: *The content of the linked URL **may** optionally be shown in context here if desired.* 
 
 The only level of depth permitted is **1**. That is to say no deeper LUACH elements in the included content are to be further interpreted.
 
-Only links within the current domain **MAY** be interpreted and included. This is to prevent unexpected inclusion of third party content not under the control of the author.  Links to other domains **MUST NOT** be interpreted, and a simple link must be shown
+Only links within the current domain **MAY** be interpreted and included. This is to prevent unexpected inclusion of third party content not under the control of the author.  Links to other domains **MUST NOT** be interpreted, and a simple link **MUST** be shown
 
 If the linked content is text/gemini, no further "may include" links in the linked content may be interpreted.  This is to keep the simplicity down and prevent any expectation by authors or readers of complex interpretation or multiple layers of inclusion
 
@@ -148,7 +150,7 @@ Included content **MUST** be clearly signalled to the end user. For example usin
 
 Authors **MUST NOT** require, anticipate or otherwise expect the content will be included, users may choose to navigate the link themselves, to use a client that includes the content only when activated by the user, or generally includes such linked content. The behaviour is client and user determined.
 
-The only supported mime types are: 
+The **only** supported mime types are: 
 
 * text/gemini - the content may be flowed into the current page, suitably marked as included content
 * text/plain - the content may be shown within a code fence, suitably marked as included content
@@ -169,13 +171,13 @@ The intention is to link to a summary of comments and responses to this page. Ho
 
 ### "Responds to" 💭 U+1F4AD
 
-Intended meaning: *The current page provides commentary or response to the linked URL.*
+Intended meaning: *The current page provides commentary or response to this linked URL.*
 
 Automated crawlers and bots can use the existence of such an element to build a database of commentary between pages.
 
 ### "Logo" (U+1F33C) 🌼 
 
-Intended meaning: *The linked URL provides the preferred logo that may be shown on this page.* 
+Intended meaning: *The linked URL contains the preferred logo that may be shown on this page.* 
 
 The size and location of the display of the logo is determined by the client.
 
@@ -185,7 +187,7 @@ The size and location of the display of the logo is determined by the client.
 
 ### "May include image" (U+1F304) 🌄
 
-Intended meaning: *This linked image **may** optionally be shown in context here if desired.* 
+Intended meaning: *The image at the linked URL **may** optionally be shown in context here, if desired.* 
 
 The size and location of the display of the image is determined by the client. Possible implementations would be similar to that for "may include" textual element, but for an image.
 
